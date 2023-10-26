@@ -1,0 +1,25 @@
+CREATE TABLE allowance (
+  allowance_id INT NOT NULL AUTO_INCREMENT,
+  allowance_type VARCHAR(255) NOT NULL,
+  allowance_amount INT(10) NOT NULL,
+  PRIMARY KEY (allowance_id)
+);
+
+INSERT INTO `employees`.`allowance`
+(`allowance_id`,
+`allowance_type`,
+`allowance_amount`)
+VALUES
+(056,'TA',15),
+(057,'DA',22),
+(058,'HSA',12),
+(059,'BONUS',50);
+
+CREATE TABLE deduction (
+  deduction_id INT NOT NULL AUTO_INCREMENT,
+  deduction_type VARCHAR(255) NOT NULL,
+  deduction_amount INT(10) NOT NULL,
+  deduction_catagory VARCHAR(5),
+  PRIMARY KEY (deduction_id)
+);
+

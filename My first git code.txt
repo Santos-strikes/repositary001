@@ -1,0 +1,209 @@
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git init
+Reinitialized existing Git repository in D:/Santhosh/Git/.git/
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git add demo01.html
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   demo01.html
+
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git log
+commit d0080ef8228e629e1b4ce0d4699ef723fccf8b98 (HEAD -> master)
+Author: Santos-strikes <sktofficial868@gmail.com>
+Date:   Mon Oct 9 17:00:53 2023 +0530
+
+    Initial version 1.0
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git add -A
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1_zejqB99KHo0huYN3etCYGA.webp
+        new file:   demo01.html
+
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git commit -m "Initial version 2.0"
+[master 2b10a1b] Initial version 2.0
+ 2 files changed, 7 insertions(+)
+ create mode 100644 1_zejqB99KHo0huYN3etCYGA.webp
+ create mode 100644 demo01.html
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git log
+commit 2b10a1b667bf29214c4c5233b47cdb63bf57b00a (HEAD -> master)
+Author: Santos-strikes <sktofficial868@gmail.com>
+Date:   Mon Oct 9 17:51:24 2023 +0530
+
+    Initial version 2.0
+
+commit d0080ef8228e629e1b4ce0d4699ef723fccf8b98
+Author: Santos-strikes <sktofficial868@gmail.com>
+Date:   Mon Oct 9 17:00:53 2023 +0530
+
+    Initial version 1.0
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git reset --hard ^C
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git reset --hard d0080ef8228e629e1b4ce0d4699ef723fccf8b98
+HEAD is now at d0080ef Initial version 1.0
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git reset --hard 2b10a1b667bf29214c4c5233b47cdb63bf57b00a
+HEAD is now at 2b10a1b Initial version 2.0
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git reset --soft d0080ef8228e629e1b4ce0d4699ef723fccf8b98
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git reset --soft 2b10a1b667bf29214c4c5233b47cdb63bf57b00a
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git log
+commit 2b10a1b667bf29214c4c5233b47cdb63bf57b00a (HEAD -> master)
+Author: Santos-strikes <sktofficial868@gmail.com>
+Date:   Mon Oct 9 17:51:24 2023 +0530
+
+    Initial version 2.0
+
+commit d0080ef8228e629e1b4ce0d4699ef723fccf8b98
+Author: Santos-strikes <sktofficial868@gmail.com>
+Date:   Mon Oct 9 17:00:53 2023 +0530
+
+    Initial version 1.0
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git remote add orgin https://github.com/Santos-strikes/repositary001.git
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git remote
+orgin
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git push orgin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 23.19 KiB | 5.80 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Santos-strikes/repositary001.git
+ * [new branch]      master -> master
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git pull orgin master
+From https://github.com/Santos-strikes/repositary001
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git pull orgin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 661 bytes | 4.00 KiB/s, done.
+From https://github.com/Santos-strikes/repositary001
+ * branch            master     -> FETCH_HEAD
+   2b10a1b..1b99434  master     -> orgin/master
+Updating 2b10a1b..1b99434
+Fast-forward
+ change01 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 change01
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --reject-shallow      don't clone shallow repository
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    --recursive ...       alias of --recurse-submodules
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch> checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --also-filter-submodules
+                          apply partial clone filters to submodules
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+    --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote
+
+
+santhoshkumar.t@CDK190 MINGW64 /d/Santhosh/Git (master)
+$ git clone https://github.com/Santos-strikes/repositary001.git
+Cloning into 'repositary001'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 1), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (10/10), 23.81 KiB | 7.94 MiB/s, done.
+Resolving deltas: 100% (1/1), done.
+
